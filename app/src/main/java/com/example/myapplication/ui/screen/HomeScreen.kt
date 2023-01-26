@@ -4,8 +4,7 @@ import android.app.appsearch.AppSearchResult
 import android.app.appsearch.SearchResult
 import android.provider.ContactsContract.Contacts.AggregationSuggestions
 import android.util.Log
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.*
@@ -16,10 +15,13 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import com.example.myapplication.R
 
 @Composable
 fun HomeScreen(homeViewModel: HomeViewModel) {
@@ -46,7 +48,23 @@ fun HomeScreen(homeViewModel: HomeViewModel) {
                 }
             )
         }
-    ) {}
+    ) {
+        Column(
+            modifier = Modifier.padding(start = 16.dp, top = 12.dp)
+        ) {
+            Row(){
+                Icon(
+                    painter = painterResource(R.drawable.ic_alarm),
+                    contentDescription = null
+                )
+                Text(
+                    text = "알람 중인 버스",
+                    fontSize = 18.sp,
+                    modifier = Modifier.padding(start = 7.dp)
+                )
+            }
+        }
+    }
 }
 
 @Composable
