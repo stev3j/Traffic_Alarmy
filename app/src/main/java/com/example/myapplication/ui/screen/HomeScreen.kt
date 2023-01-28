@@ -74,12 +74,12 @@ fun HomeDetail(modifier: Modifier){
             )
         }
         Spacer(modifier = Modifier.padding(vertical = 10.dp))
-        AlarmBus()
+        AlarmBusList()
     }
 }
 
 @Composable
-fun AlarmBus(){
+fun AlarmBusList(){
     LazyColumn(
         verticalArrangement = Arrangement.spacedBy(5.dp)
     ) {
@@ -89,7 +89,7 @@ fun AlarmBus(){
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(46.dp)
-                    .background(Color.LightGray)
+                    .background(Color(0xFBFBFB))
             ){
                 Row(
                     verticalAlignment = Alignment.Bottom,
