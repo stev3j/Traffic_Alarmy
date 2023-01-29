@@ -26,6 +26,8 @@ import com.example.myapplication.R
 import com.example.myapplication.data.SearchWidgetState
 import com.example.myapplication.data.alarm_bus
 
+// stuff
+
 @Composable
 fun HomeScreen(homeViewModel: HomeViewModel) {
 
